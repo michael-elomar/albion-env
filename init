@@ -1,0 +1,11 @@
+#! /bin/bash
+
+ [[ $0 != $BASH_SOURCE ]] && SCRIPT_PATH=$(realpath $BASH_SOURCE) || SCRIPT_PATH="`readlink -f "$0"`"
+ENV_DIR="`dirname "$SCRIPT_PATH"`"
+
+SCRIPT_DIR=$(dirname $0)
+
+python3 -m venv ${SCRIPT_DIR}/.venv
+
+# Install dependencies as needed by this project
+# 1. Install vcstool using pip3 when my PR is merged
