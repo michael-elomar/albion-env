@@ -7,6 +7,8 @@ repositories:
     type: git
     url: git@github.com:michael-elomar/dragon_build.git
     version: master
+    shell: |
+      ln -s build/dragon_build/root-build.sh build.sh
   packages/linux:
     type: git
     url: git@github.com:michael-elomar/rpi-linux.git
